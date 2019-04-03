@@ -14,7 +14,7 @@ module.exports = () => {
     if (typeof require !== 'undefined') {
       require.extensions['.less'] = file => {}
     }
-    
+
     return withLess({
       lessLoaderOptions: {
         javascriptEnabled: true,
