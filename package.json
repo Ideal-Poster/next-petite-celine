@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/node": "^11.13.0",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.16.1",
     "babel-plugin-import": "^1.11.0",
