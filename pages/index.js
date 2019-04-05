@@ -1,91 +1,114 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
+import React from 'react';
+import { Col } from 'antd';
 
-const Home = () => (
-  <div>
-    <Head title="Home" />
-    <Nav />
+import '../styles.less';
+import NavMenu from '../components/navMenu';
+import { playlist } from '../api';
 
-    <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
 
-      <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showComponent: false
+    };
+    this._onTrackClick = this._onTrackClick.bind(this);
+  }
+
+  _onTrackClick() {
+    this.setState({
+      showComponent: true,
+    });
+  }
+
+  componentDidMount() {
+    this.init();
+
+  }
+
+  init() {
+    let tracks = Array.prototype.slice.call( document.getElementsByClassName("track") )
+    tracks.forEach((track, i) => {
+      track.addEventListener('click', () => {
+        setTimeout(() => {
+
+          this.musicPlayer._playMusic(i)
+        }, 100);
+        tracks.forEach(element => {
+          if (element.classList.contains('active')) {
+            element.classList.remove('active')
+          }
+        });
+        tracks[i].classList.add('active');
+      });
+    });
+  }
+
+  render() {
+    return(
+      <div className="music-page-container">
+        <div className="music-color-underlay"></div>
+        <div className="background">
+          <Col sm={{ span: 4, offset: 1 }} md={{ span: 4, offset: 2 }} id="nav-menu">
+            <NavMenu title="Celine"/>
+          </Col>
+          <Col sm={{ offset: 2, span: 20 }} md={{ offset: 8, span: 8 }} xl={{ offset: 10, span: 6 }}>
+            <div className="title-container-1">
+              <div className="rectangle"/>
+              <h2 className="album-title">Young Soldier</h2>
+            </div>
+            <ul>
+              {/* {playlist.map((el, i) =>
+                <li onClick={this._onTrackClick} className={`track track-${i}`} key={i} style={{listStyleType: 'none'}}>{ el.title }</li>
+              )} */}
+            </ul>
+            <div className="title-container-2">
+              <div className="rectangle"/>
+              <h2 className="video-title">“No No More”</h2>
+            </div>
+            <div className="video-wrapper">
+              <iframe title="musicVideo" id="myVideo" className="music-video" src="https://www.youtube.com/embed/pnojhQrQsOE?rel=0&loop=1;showinfo=0?theme=light&color=white"
+                frameBorder="0"  allow="encrypted-media" allowFullScreen></iframe>
+            </div>
+            <div style={{width:'330px'}}>
+              <p className="purchase">Purchase Here</p>
+              <div className="icons">
+              <a href="https://itunes.apple.com/us/album/words/1371314381?i=1371314384" rel="noopener noreferrer" target="_blank">
+                {/* <FontAwesomeIcon className="apple" icon={ faApple } /> */}
+              </a>
+              <a href="https://open.spotify.com/album/0xKZdHbA8Ftrrry0V24wyV" rel="noopener noreferrer" target="_blank">
+                {/* <FontAwesomeIcon className="spotify" icon={ faSpotify } /> */}
+              </a>
+              <a href="https://play.google.com/store/music/album/Petite_Celine_Young_Soldier?id=Blkqdzvkjjvonb4bfnjz5vvfjd4" rel="noopener noreferrer" target="_blank">
+                {/* <FontAwesomeIcon className="googlePlay" icon={ faGooglePlay } /> */}
+              </a>
+              <a href="https://soundcloud.com/petite-celine/sets/young-soldier" rel="noopener noreferrer" target="_blank">
+                {/* <FontAwesomeIcon className="soundcloud" icon={ faSoundcloud } /> */}
+              </a>
+              </div>
+            </div>
+          </Col>
+        </div>
+        {/* {this.state.showComponent &&
+          // <MusicPlayer playlist={playlist} ref={musicPlayer => (this.musicPlayer = musicPlayer)}/>
+        } */}
+        {/* <Events/> */}
+        <style JSX>{`
+          .background {
+            background: url("./static/celine-portrait.png")no-repeat 50% 50%;
+            background-size: cover;
+            background-position: center;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+            min-height: 700px;
+            height: 92vh;
+          }
+        `}</style>
       </div>
-    </div>
 
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style>
-  </div>
-)
+    );
+  }
+}
 
 export default Home

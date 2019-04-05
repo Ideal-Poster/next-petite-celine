@@ -1,0 +1,222 @@
+.music-page-container {
+  overflow-x: hidden;
+}
+
+// .background {
+//   // background: url("../assets/images/celine-portrait.png")no-repeat 50% 50%;
+//   // background-size: cover;
+//   // background-position: center;
+//   // -moz-background-size: cover;
+//   // -o-background-size: cover;
+//   // -webkit-background-size: cover;
+//   min-height: 700px;
+//   height: 92vh;
+// }
+
+.album-title, .video-title {
+  font-size: 44px;
+  padding-bottom: 13px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video
+,.album
+ {
+  width: 260px;
+  /* padding-top: 10vh; */
+}
+
+.rectangle {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(85, 170, 160);
+  width: 8px;
+  height: 35px;
+  right: 25px;
+  top: 3px;
+}
+
+.title-container-1 {
+  margin-top: 5.5vh;
+}
+
+.title-container-2 {
+  margin-bottom: 10px;
+}
+
+.title-container-1, .title-container-2 {
+  height: 70px;
+}
+
+.title-container-1, .title-container-2 {
+  min-width: 320px;
+}
+
+.title-container-1, .title-container-2, .album-title, .video-title {
+  display: inline-block;
+
+}
+
+.music-color-underlay{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -10000;
+  background: #1c1820;
+}
+
+@media (max-width: 767.98px) {
+  .background {
+    min-height: 900px;
+  }
+}
+
+
+// NavMenu stlyes
+
+.nav-container{
+  top: -40px;
+  position: absolute;
+  z-index: 1000;
+}
+
+ul.menu-buttons {
+  position: relative;
+  font-size: 40px;
+  line-height: 1.2;
+  list-style-type: none;
+}
+
+.nav-icon {
+  color: #a4955c;
+  font-size: 20.5px;
+}
+
+.nav-icon:hover {
+  color: #7d7246;
+}
+
+.shadow {
+  text-shadow: 4px 4px 5px rgb(40, 39, 39, 0.2);
+}
+
+ul.menu-buttons > li > * {
+  color: #E0DCE0;
+}
+
+ul.menu-buttons > li > *:hover {
+  color: grey;
+}
+
+.menu-buttons {
+  min-width: 150px;
+
+}
+
+.menu-buttons  > * {
+  /* font-family: 'Greycliff-Regular'; */
+}
+
+.nav-rectangle {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(85, 170, 160);
+  width: 8px;
+  height: 35px;
+  right: 35px;
+  top: 3px;
+  vertical-align: baseline;
+  margin-right: -15px;
+}
+
+#header {
+  margin-top: 23.75vh;
+  line-height: 0.659;
+  letter-spacing: -1px;
+  position: relative;
+  /* background: darkorange; */
+  height: 205px;
+}
+
+#header > #intro {
+  position: relative;
+  top: -110px;
+  /* opacity: 0; */
+}
+
+#header > * {
+  font-size: 113px;
+  font-family: 'Cardo', serif;
+  z-index: 1000;
+}
+
+#header, .album-title, .video-title {
+  font-family: 'Cardo', serif;
+  color: #e0dce0;
+}
+
+@media (max-width: 1199.98px) {
+  #header {
+    font-size: 94px;
+    top: 0;
+  }
+  ul.menu-buttons {
+    font-size: 40px;
+  }
+}
+
+.facebook, .instagram, .youtube, .apple, .spotify, .googlePlay, .soundcloud {
+  display: inline-block;
+  color: #a4955c;
+  font-size: 20.5px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+}
+
+.purchase{
+  display: inline-block;
+  color: #a4955c;
+  position: relative;
+  font-size: 16px;
+  top: -100px;
+  font-family: 'Greycliff-Regular'
+}
+.icons {
+  display: inline-block;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.email {
+  color: dimgray;
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+}
+
+.email > p {
+  font-family: 'Greycliff-Regular';
+}
+
+
+a.email:hover {
+  color: #e0dce0;
+}
+
+@media (max-width: 767.5px) {
+  .nav-container{
+    display: none;
+  }
+}
