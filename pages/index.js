@@ -1,9 +1,13 @@
 import React from 'react';
+import Head from 'next/head';
 import { Col } from 'antd';
 
 import '../styles.less';
 import NavMenu from '../components/navMenu';
+import Events from '../components/events';
 import { playlist } from '../api';
+
+
 
 
 class Home extends React.Component {
@@ -46,7 +50,11 @@ class Home extends React.Component {
 
   render() {
     return(
+
       <div className="music-page-container">
+        <Head>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>
+        </Head>
         <div className="music-color-underlay"></div>
         <div className="background">
           <Col sm={{ span: 4, offset: 1 }} md={{ span: 4, offset: 2 }} id="nav-menu">
@@ -74,16 +82,16 @@ class Home extends React.Component {
               <p className="purchase">Purchase Here</p>
               <div className="icons">
               <a href="https://itunes.apple.com/us/album/words/1371314381?i=1371314384" rel="noopener noreferrer" target="_blank">
-                {/* <FontAwesomeIcon className="apple" icon={ faApple } /> */}
+                <i className="fab fa-apple apple"></i>
               </a>
               <a href="https://open.spotify.com/album/0xKZdHbA8Ftrrry0V24wyV" rel="noopener noreferrer" target="_blank">
-                {/* <FontAwesomeIcon className="spotify" icon={ faSpotify } /> */}
+                <i class="fab fa-spotify spotify"></i>
               </a>
               <a href="https://play.google.com/store/music/album/Petite_Celine_Young_Soldier?id=Blkqdzvkjjvonb4bfnjz5vvfjd4" rel="noopener noreferrer" target="_blank">
-                {/* <FontAwesomeIcon className="googlePlay" icon={ faGooglePlay } /> */}
+                <i class="fab fa-google-play googlePlay"></i>
               </a>
               <a href="https://soundcloud.com/petite-celine/sets/young-soldier" rel="noopener noreferrer" target="_blank">
-                {/* <FontAwesomeIcon className="soundcloud" icon={ faSoundcloud } /> */}
+                <i class="fab fa-soundcloud soundcloud"></i>
               </a>
               </div>
             </div>
@@ -92,7 +100,7 @@ class Home extends React.Component {
         {/* {this.state.showComponent &&
           // <MusicPlayer playlist={playlist} ref={musicPlayer => (this.musicPlayer = musicPlayer)}/>
         } */}
-        {/* <Events/> */}
+        <Events/>
         <style JSX>{`
           .background {
             background: url("./static/celine-portrait.png")no-repeat 50% 50%;

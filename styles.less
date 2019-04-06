@@ -2,17 +2,6 @@
   overflow-x: hidden;
 }
 
-// .background {
-//   // background: url("../assets/images/celine-portrait.png")no-repeat 50% 50%;
-//   // background-size: cover;
-//   // background-position: center;
-//   // -moz-background-size: cover;
-//   // -o-background-size: cover;
-//   // -webkit-background-size: cover;
-//   min-height: 700px;
-//   height: 92vh;
-// }
-
 .album-title, .video-title {
   font-size: 44px;
   padding-bottom: 13px;
@@ -219,4 +208,97 @@ a.email:hover {
   .nav-container{
     display: none;
   }
+}
+
+// Event styles
+.date > p, .venue > p, .location > p {
+  /* font-family: 'Greycliff-Regular'; */
+  letter-spacing: -0.35px;
+}
+
+.date > p, .location > p {
+  font-size: 16px;
+}
+
+.venue > p {
+  font-size: 40px;
+  line-height: 0.3;
+  font-family: 'Greycliff-Regular';
+
+}
+
+.events-section {
+  padding: 60px 0px 0px 0px;
+  border: 10px solid white;
+  background: #1c1820;
+  min-height: 100vh;
+  color: #e0dce0;
+  line-height: 24px;
+  /* font-family: 'Greycliff-Regular' */
+}
+
+.events-banner {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 47px;
+  height: 100px;
+  color: #e0dce0;
+  font-family: 'Greycliff-Medium';
+}
+
+.location {
+  margin-top: -20px;
+}
+
+.venue {
+  font-size: 39px;
+}
+
+.button, .mobile-button {
+  background: #1c1820;
+  border: 2px solid #e0dce0;
+  border-radius: 5px;
+  width: 155px;
+  height: 36px;
+  color: #e0dce0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Greycliff-Regular';
+
+}
+
+.button {
+  background: #1c1820 !important;
+  color: #e0dce0 !important;
+}
+
+.button:hover {
+  background: #e0dce0 !important;
+  color: #1c1820 !important;
+  border-color: #1c1820 !important;
+}
+
+
+@media (max-width: 767.98px) {
+  .events-banner {
+    writing-mode: horizontal-tb;
+    height: 100px;
+  }
+
+}
+
+@media (min-width: 576px) {
+  .mobile-button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .vertical-center {
+    display: none;
+  }
+}
+
+.vertical-center {
+  height: 100%;
 }
