@@ -53,7 +53,7 @@ class Home extends React.Component {
 
       <div className="music-page-container">
         <Head>
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossOrigin="anonymous"></link>
         </Head>
         <div className="music-color-underlay"></div>
         <div className="background">
@@ -66,9 +66,9 @@ class Home extends React.Component {
               <h2 className="album-title">Young Soldier</h2>
             </div>
             <ul>
-              {/* {playlist.map((el, i) =>
+              {playlist.map((el, i) =>
                 <li onClick={this._onTrackClick} className={`track track-${i}`} key={i} style={{listStyleType: 'none'}}>{ el.title }</li>
-              )} */}
+              )}
             </ul>
             <div className="title-container-2">
               <div className="rectangle"/>
