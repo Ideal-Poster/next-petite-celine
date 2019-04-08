@@ -7,9 +7,6 @@ import NavMenu from '../components/navMenu';
 import Events from '../components/events';
 import { playlist } from '../api';
 
-
-
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +47,6 @@ class Home extends React.Component {
 
   render() {
     return(
-
       <div className="music-page-container">
         <Head>
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossOrigin="anonymous"></link>
@@ -97,11 +93,9 @@ class Home extends React.Component {
             </div>
           </Col>
         </div>
-        {/* {this.state.showComponent &&
-          // <MusicPlayer playlist={playlist} ref={musicPlayer => (this.musicPlayer = musicPlayer)}/>
-        } */}
         <Events/>
-        <style JSX>{`
+
+        <style jsx>{`
           .background {
             background: url("./static/celine-portrait.png")no-repeat 50% 50%;
             background-size: cover;

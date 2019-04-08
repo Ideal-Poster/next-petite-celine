@@ -19,23 +19,6 @@ class NavMenu extends Component  {
     }
   }
 
-  componentDidMount() {
-    // this.titleIntro();
-  }
-  // titleIntro() {
-  //   TweenMax.fromTo(this.DOM.title.current, 1,
-  //     {
-  //     ease: Power4.easeInOut,
-  //     opacity: 0,
-  //     top: -140
-  //     },
-  //     {
-  //       opacity: 1,
-  //       top:-110
-  //     }
-  //   )
-  // }
-
   render() {
     return(
       <div className="nav-container">
@@ -65,7 +48,7 @@ class NavMenu extends Component  {
               <a>Art</a>
             </Link>
           </li>
-          <li className="acting">
+          <li className="Acting">
             {
               this.props.title === "Actress" &&
               <div className="nav-rectangle"/>

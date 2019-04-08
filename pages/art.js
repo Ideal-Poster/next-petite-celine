@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-// import './ArtPage.css';
+import { Col } from 'antd';
 
-
-import { Col, Card } from 'antd';
 import photos from '../api';
 import NavMenu from '../components/navMenu';
 import ImageCard from '../components/imageCard';
-
-// import Gallery from 'react-photo-gallery';
-// import Lightbox from 'react-images';
 
 class ArtPage extends Component {
   constructor(props) {
@@ -18,14 +13,6 @@ class ArtPage extends Component {
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
-  }
-
-  componentDidMount() {
-    // photos[o]
-    // var hello = document.getElementsByClassName('hello')
-    // hello[0].classList.add('hello-intro')
-
-
   }
 
   openLightbox(event, obj) {

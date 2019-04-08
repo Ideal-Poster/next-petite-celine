@@ -347,7 +347,6 @@ a.email:hover {
   position: absolute;
 }
 
-
 @media (max-width: 767.98px) {
   body {
     background: #1c1820;
@@ -356,4 +355,52 @@ a.email:hover {
 
 .etsy-button {
   margin-top: 50px;
+}
+
+// Acting Page
+.reel-box {
+  height: 100%;
+  width: 191.5%;
+  background: #71bcc2;
+  position: absolute;
+  display: block;
+  left: -50%;
+}
+.reel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.acting-color-underlay{
+  width: 100vw;
+  height: 100vh;
+  background: #3e788e;
+  z-index: -10000;
+  position: fixed;
+}
+
+#bio-button {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  transform: translateX(50%);
+  height: 55px;
+  width: 55px;
+  border-radius: 100px;
+  background: #6d3e8e;
+  border: 0px;
+}
+
+#bio-button:hover {
+  background: #714d8b;
+}
+
+body {
+  overflow-x: scroll;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    background: #3e788e;
+    overflow-x: hidden;
+  }
 }

@@ -54,146 +54,146 @@ export const playlist = [
 
 export const photos = [
   {
-    src: './static/Green Invasion - Light Only.jpg',
+    src: './static/gallery/Green Invasion - Light Only.jpg',
     width: 1,
     height: 1,
     description: 'Image 1'
   },
   {
-    src: './static/Green Invasion - Light.jpg',
+    src: './static/gallery/Green Invasion - Light.jpg',
     width: 1,
     height: 1,
     description: 'Image 2'
   },
   {
-    src: './static/Green Invasion.jpg',
+    src: './static/gallery/Green Invasion.jpg',
     width: 1,
     height: 1,
     description: 'Image 3'
   },
   {
-    src: './static/GypsyLynx - Light Only.jpg',
+    src: './static/gallery/GypsyLynx - Light Only.jpg',
     width: 3,
     height: 4,
     description: 'Image 4'
   },
   {
-    src: './static/GypsyLynx - Light.jpg',
+    src: './static/gallery/GypsyLynx - Light.jpg',
     width: 3,
     height: 4,
     description: 'Image 5'
   },
   {
-    src: './static/GypsyLynx in Smoke -Light.jpg',
+    src: './static/gallery/GypsyLynx in Smoke -Light.jpg',
     width: 1,
     height: 1,
     description: 'Image 6'
   },
   {
-    src: './static/GypsyLynx in Smoke- Light Only.jpg',
+    src: './static/gallery/GypsyLynx in Smoke- Light Only.jpg',
     width: 1,
     height: 1,
     description: 'Image 7'
   },
   {
-    src: './static/GypsyLynx in Smoke.jpg',
+    src: './static/gallery/GypsyLynx in Smoke.jpg',
     width: 1,
     height: 1,
     description: 'Image 8'
   },
   {
-    src: './static/GypsyLynx in Space - Light Only.jpg',
+    src: './static/gallery/GypsyLynx in Space - Light Only.jpg',
     width: 1,
     height: 1,
     description: 'Image 9'
   },
   {
-    src: './static/GypsyLynx in Space - Light.jpg',
+    src: './static/gallery/GypsyLynx in Space - Light.jpg',
     width: 1,
     height: 1,
     description: 'Image 10'
   },
   {
-    src: './static/GypsyLynx in Space.jpg',
+    src: './static/gallery/GypsyLynx in Space.jpg',
     width: 1,
     height: 1,
     description: 'Image 11'
   },
   {
-    src: './static/Eclipse - Light.png',
+    src: './static/gallery/Eclipse - Light.png',
     width: 1,
     height: 1,
     description: 'Image 12'
   },
   {
-    src: './static/Eclipse.png',
+    src: './static/gallery/Eclipse.png',
     width: 1,
     height: 1,
     description: 'Image 13'
   },
   {
-    src: './static/GypsyLynx.jpg',
+    src: './static/gallery/GypsyLynx.jpg',
     width: 3,
     height: 4,
     description: 'Image 14'
   },
   {
-    src: './static/Healing Hands - Glow Only.jpg',
+    src: './static/gallery/Healing Hands - Glow Only.jpg',
     width: 1,
     height: 1,
     description: 'Image 15'
   },
   {
-    src: './static/Healing Hands - Light Only.jpg',
+    src: './static/gallery/Healing Hands - Light Only.jpg',
     width: 1,
     height: 1,
     description: 'Image 16'
   },
 
   {
-    src: './static/Healing Hands - Light.jpg',
+    src: './static/gallery/Healing Hands - Light.jpg',
     width: 1,
     height: 1,
     description: 'Image 18'
   },
   {
-    src: './static/Healing Hands.jpg',
+    src: './static/gallery/Healing Hands.jpg',
     width: 1,
     height: 1,
     description: 'Image 17'
   },
   {
-    src: './static/Portal - Light Only.jpg',
+    src: './static/gallery/Portal - Light Only.jpg',
     width: 1,
     height: 1,
     description: 'Image 18'
   },
   {
-    src: './static/Portal - Light.jpg',
+    src: './static/gallery/Portal - Light.jpg',
     width: 1,
     height: 1,
     description: 'Image 19'
   },
   {
-    src: './static/Portal.jpg',
+    src: './static/gallery/Portal.jpg',
     width: 1,
     height: 1,
     description: 'Image 20'
   },
   {
-    src: './static/Tulips - Light Only_.jpg',
+    src: './static/gallery/Tulips - Light Only_.jpg',
     width: 1,
     height: 1,
     description: 'Image 21'
   },
   {
-    src: './static/Tulips - Light.jpg',
+    src: './static/gallery/Tulips - Light.jpg',
     width: 1,
     height: 1,
     description: 'Image 22'
   },
   {
-    src: './static/Tulips.jpg',
+    src: './static/gallery/Tulips.jpg',
     width: 1,
     height: 1,
     description: 'Image 23'
