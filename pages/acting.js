@@ -7,12 +7,14 @@ import NavMenu from '../components/navMenu';
 
 const content = (
   <div style={{maxWidth: '60vw'}}>
-    <p>Celine's first love was film. She began her career as an actress at age 6,
+    <p>
+      Celine's first love was film. She began her career as an actress at age 6,
       and became a member of SAG in 2002. Celine's work can be seen in feature films
       such as, Spielberg’s “Catch Me if You Can” and Eastwood’s “Mystic River”),
       commercials, and TV, as well as work voice overs and indie films. Celine graduated
       from Pace University in NYC with a BFA in Acting. She also taught weekly
-      Improvisational Acting classes at The Door High School in Manhattan. </p>
+      Improvisational Acting classes at The Door High School in Manhattan.
+    </p>
   </div>
 );
 

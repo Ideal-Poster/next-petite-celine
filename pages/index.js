@@ -8,6 +8,12 @@ import Events from '../components/events';
 import MusicPlayer from '../components/musicPlayer';
 import { playlist } from '../api';
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faApple, faSpotify, faGooglePlay, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+library.add(faApple, faSpotify, faGooglePlay, faSoundcloud);
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -78,17 +84,19 @@ class Home extends React.Component {
             <div style={{width:'330px'}}>
               <p className="purchase">Purchase Here</p>
               <div className="icons">
+
+              {/* { document.addEventListener('load', () => {}) } */}
               <a href="https://itunes.apple.com/us/album/words/1371314381?i=1371314384" rel="noopener noreferrer" target="_blank">
-                <i className="fab fa-apple apple"></i>
+                <FontAwesomeIcon className="apple" icon={ faApple } />
               </a>
               <a href="https://open.spotify.com/album/0xKZdHbA8Ftrrry0V24wyV" rel="noopener noreferrer" target="_blank">
-                <i class="fab fa-spotify spotify"></i>
+                <FontAwesomeIcon className="spotify" icon={ faSpotify } />
               </a>
               <a href="https://play.google.com/store/music/album/Petite_Celine_Young_Soldier?id=Blkqdzvkjjvonb4bfnjz5vvfjd4" rel="noopener noreferrer" target="_blank">
-                <i class="fab fa-google-play googlePlay"></i>
+                <FontAwesomeIcon className="googlePlay" icon={ faGooglePlay } />
               </a>
               <a href="https://soundcloud.com/petite-celine/sets/young-soldier" rel="noopener noreferrer" target="_blank">
-                <i class="fab fa-soundcloud soundcloud"></i>
+                <FontAwesomeIcon className="soundcloud" icon={ faSoundcloud } />
               </a>
               </div>
             </div>
