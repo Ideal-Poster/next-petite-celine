@@ -5,6 +5,7 @@ import { Col } from 'antd';
 import '../styles.less';
 import NavMenu from '../components/navMenu';
 import Events from '../components/events';
+import MusicPlayer from '../components/musicPlayer';
 import { playlist } from '../api';
 
 class Home extends React.Component {
@@ -93,6 +94,9 @@ class Home extends React.Component {
             </div>
           </Col>
         </div>
+        {this.state.showComponent &&
+          <MusicPlayer playlist={playlist} ref={musicPlayer => (this.musicPlayer = musicPlayer)}/>
+        }
         <Events/>
 
         <style jsx>{`

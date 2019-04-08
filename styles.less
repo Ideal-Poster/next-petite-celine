@@ -404,3 +404,74 @@ body {
     overflow-x: hidden;
   }
 }
+
+// Music Player Style
+
+* {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.control-container {
+  position: relative;
+  top:  15px;
+}
+
+.player-container .info-and-control {
+  width: 100%;
+  height: 55px;
+  background: #432e59;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+.player-container .info-and-control .progress-container {
+  width: 100%;
+  height: 3px;
+  /* background-color: #dadada; */
+  cursor: pointer;
+}
+.player-container .info-and-control .progress-container .progress {
+  height: 100%;
+}
+.music-control {
+  position: relative;
+  /* top: 13px; */
+  font-size: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.track {
+  position: relative;
+  left: -30px;
+  font-size: 16px;
+  color:dimgray;
+  cursor: pointer;
+  font-family: 'Greycliff-Regular'
+}
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  top: -1px;
+  position: relative;
+}
+.track:hover {
+  color: #e0dce0;
+}
+.active {
+  color: #e0dce0;
+}
+.inactive {
+  color: dimgray;
+}
+.music-info {
+  position: relative;
+  top: -2px;
+}
+.controls {
+  width: 100px;
+}
+
+
+
