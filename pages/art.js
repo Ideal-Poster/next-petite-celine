@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 // import './ArtPage.css';
 
 
-import { Col, Button } from 'antd';
-// import photos from './GalleryApi';
+import { Col, Card } from 'antd';
+import photos from '../api';
 import NavMenu from '../components/navMenu';
+import ImageCard from '../components/imageCard';
 
 // import Gallery from 'react-photo-gallery';
 // import Lightbox from 'react-images';
@@ -18,6 +19,15 @@ class ArtPage extends Component {
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
   }
+
+  componentDidMount() {
+    // photos[o]
+    // var hello = document.getElementsByClassName('hello')
+    // hello[0].classList.add('hello-intro')
+
+
+  }
+
   openLightbox(event, obj) {
     this.setState({
       currentImage: obj.index,
@@ -44,25 +54,22 @@ class ArtPage extends Component {
     return (
       <div>
         <div className="art-color-underlay"/>
-          <Col sm={{ span: 8, offset: 2 }} xl={{ span: 7, offset: 2 }}>
-            <NavMenu title="Art"/>
-          </Col>
-          <Col xs={24} md={{span: 14 }} style={{
-            zIndex: 100,
-            marginTop:'-2px'
-          }}>
-          <div className='background-color'/>
-          <a href="https://www.etsy.com/shop/GypsyLynx">
-            <Button size={"large"} style={{ marginBottom: '5px', marginTop: '60px', background: '#6d3e8e', border: 'none' }} className="etsy-button" type="primary">Etsy Store</Button>
-          </a>
-          {/* <Gallery photos={photos} onClick={this.openLightbox} />
-          <Lightbox images={photos}
-            onClose={this.closeLightbox}
-            onClickPrev={this.gotoPrevious}
-            onClickNext={this.gotoNext}
-            currentImage={this.state.currentImage}
-            isOpen={this.state.lightboxIsOpen}
-          /> */}
+        <Col sm={{ span: 8, offset: 2 }} xl={{ span: 7, offset: 2 }}>
+          <NavMenu title="Art"/>
+        </Col>
+        <Col xs={24} md={{span: 14 }} style={{
+          zIndex: 100,
+          marginTop:'-2px'
+        }}>
+        <div className='background-color'/>
+        <div className="image-list">
+          { photos.map((photo) =>
+            // <Col span={6} md={12} xs={24}>
+              // <img alt="image1" style={{width: '100%'}} src={photo.src} />
+              <ImageCard key={photo.id} description={photo.description} image={photo.src}/>
+            // </Col>
+          )}
+        </div>
         </Col>
       </div>
     )

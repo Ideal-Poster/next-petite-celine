@@ -51,3 +51,153 @@ export const playlist = [
     title: 'Young Soldier'
   }
 ];
+
+export const photos = [
+  {
+    src: './static/Green Invasion - Light Only.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 1'
+  },
+  {
+    src: './static/Green Invasion - Light.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 2'
+  },
+  {
+    src: './static/Green Invasion.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 3'
+  },
+  {
+    src: './static/GypsyLynx - Light Only.jpg',
+    width: 3,
+    height: 4,
+    description: 'Image 4'
+  },
+  {
+    src: './static/GypsyLynx - Light.jpg',
+    width: 3,
+    height: 4,
+    description: 'Image 5'
+  },
+  {
+    src: './static/GypsyLynx in Smoke -Light.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 6'
+  },
+  {
+    src: './static/GypsyLynx in Smoke- Light Only.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 7'
+  },
+  {
+    src: './static/GypsyLynx in Smoke.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 8'
+  },
+  {
+    src: './static/GypsyLynx in Space - Light Only.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 9'
+  },
+  {
+    src: './static/GypsyLynx in Space - Light.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 10'
+  },
+  {
+    src: './static/GypsyLynx in Space.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 11'
+  },
+  {
+    src: './static/Eclipse - Light.png',
+    width: 1,
+    height: 1,
+    description: 'Image 12'
+  },
+  {
+    src: './static/Eclipse.png',
+    width: 1,
+    height: 1,
+    description: 'Image 13'
+  },
+  {
+    src: './static/GypsyLynx.jpg',
+    width: 3,
+    height: 4,
+    description: 'Image 14'
+  },
+  {
+    src: './static/Healing Hands - Glow Only.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 15'
+  },
+  {
+    src: './static/Healing Hands - Light Only.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 16'
+  },
+
+  {
+    src: './static/Healing Hands - Light.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 18'
+  },
+  {
+    src: './static/Healing Hands.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 17'
+  },
+  {
+    src: './static/Portal - Light Only.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 18'
+  },
+  {
+    src: './static/Portal - Light.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 19'
+  },
+  {
+    src: './static/Portal.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 20'
+  },
+  {
+    src: './static/Tulips - Light Only_.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 21'
+  },
+  {
+    src: './static/Tulips - Light.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 22'
+  },
+  {
+    src: './static/Tulips.jpg',
+    width: 1,
+    height: 1,
+    description: 'Image 23'
+  }
+];
+
+export default photos;
