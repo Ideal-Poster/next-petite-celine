@@ -14,16 +14,17 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faApple, faSpotify, faGooglePlay, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
 library.add(faApple, faSpotify, faGooglePlay, faSoundcloud);
 
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+
+
 class Home extends React.Component {
+  state = { showComponent: false }
   constructor(props) {
     super(props);
-    this.state = {
-      showComponent: false
-    };
-    this._onTrackClick = this._onTrackClick.bind(this);
+    this.icons = React.createRef();
   }
 
-  _onTrackClick() {
+  _onTrackClick = () => {
     this.setState({
       showComponent: true,
     });
@@ -31,7 +32,11 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.init();
+    this.showLoaded();
+  }
 
+  showLoaded() {
+    this.icons.current.style.opacity =  1;
   }
 
   init() {
@@ -39,7 +44,6 @@ class Home extends React.Component {
     tracks.forEach((track, i) => {
       track.addEventListener('click', () => {
         setTimeout(() => {
-
           this.musicPlayer._playMusic(i)
         }, 100);
         tracks.forEach(element => {
@@ -83,21 +87,19 @@ class Home extends React.Component {
             </div>
             <div style={{width:'330px'}}>
               <p className="purchase">Purchase Here</p>
-              <div className="icons">
-
-              {/* { document.addEventListener('load', () => {}) } */}
-              <a href="https://itunes.apple.com/us/album/words/1371314381?i=1371314384" rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon className="apple" icon={ faApple } />
-              </a>
-              <a href="https://open.spotify.com/album/0xKZdHbA8Ftrrry0V24wyV" rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon className="spotify" icon={ faSpotify } />
-              </a>
-              <a href="https://play.google.com/store/music/album/Petite_Celine_Young_Soldier?id=Blkqdzvkjjvonb4bfnjz5vvfjd4" rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon className="googlePlay" icon={ faGooglePlay } />
-              </a>
-              <a href="https://soundcloud.com/petite-celine/sets/young-soldier" rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon className="soundcloud" icon={ faSoundcloud } />
-              </a>
+              <div ref={ this.icons } className="icons">
+                <a href="https://itunes.apple.com/us/album/words/1371314381?i=1371314384" rel="noopener noreferrer" target="_blank">
+                  <FontAwesomeIcon className="apple" icon={ faApple } />
+                </a>
+                <a href="https://open.spotify.com/album/0xKZdHbA8Ftrrry0V24wyV" rel="noopener noreferrer" target="_blank">
+                  <FontAwesomeIcon className="spotify" icon={ faSpotify } />
+                </a>
+                <a href="https://play.google.com/store/music/album/Petite_Celine_Young_Soldier?id=Blkqdzvkjjvonb4bfnjz5vvfjd4" rel="noopener noreferrer" target="_blank">
+                  <FontAwesomeIcon className="googlePlay" icon={ faGooglePlay } />
+                </a>
+                <a href="https://soundcloud.com/petite-celine/sets/young-soldier" rel="noopener noreferrer" target="_blank">
+                  <FontAwesomeIcon className="soundcloud" icon={ faSoundcloud } />
+                </a>
               </div>
             </div>
           </Col>

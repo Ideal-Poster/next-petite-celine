@@ -200,6 +200,7 @@ ul.menu-buttons > li > *:hover {
   display: inline-block;
   padding-left: 20px;
   padding-top: 10px;
+  opacity: 0;
 }
 
 .email {
@@ -319,6 +320,7 @@ a.email:hover {
 
 // Art syles
 .image-list {
+  opacity: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 0 10px;
@@ -406,13 +408,10 @@ body {
 }
 
 // Music Player Style
-
-
 .control-container {
   position: relative;
   top:  15px;
 }
-
 .player-container .info-and-control {
   width: 100%;
   height: 55px;
@@ -424,7 +423,6 @@ body {
 .player-container .info-and-control .progress-container {
   width: 100%;
   height: 3px;
-  /* background-color: #dadada; */
   cursor: pointer;
 }
 .player-container .info-and-control .progress-container .progress {
@@ -432,7 +430,6 @@ body {
 }
 .music-control {
   position: relative;
-  /* top: 13px; */
   font-size: 18px;
   margin-right: 12px;
   cursor: pointer;

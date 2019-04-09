@@ -11,14 +11,16 @@ import ImageCard from '../components/imageCard';
 
 class ArtPage extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { currentImage: 0 };
-  //   this.closeLightbox = this.closeLightbox.bind(this);
-  //   this.openLightbox = this.openLightbox.bind(this);
-  //   this.gotoNext = this.gotoNext.bind(this);
-  //   this.gotoPrevious = this.gotoPrevious.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+    // this.state = { currentImage: 0 };
+    // this.closeLightbox = this.closeLightbox.bind(this);
+    // this.openLightbox = this.openLightbox.bind(this);
+    // this.gotoNext = this.gotoNext.bind(this);
+    // this.gotoPrevious = this.gotoPrevious.bind(this);
+
+    this.imageList = React.createRef();
+  }
 
   // openLightbox(event, obj) {
   //   this.setState({
@@ -44,20 +46,18 @@ class ArtPage extends Component {
   // }
 
   componentDidMount() {
-    window.addEventListener('DOMContentLoaded', (event) => {
-      console.log('DOM fully loaded and parsed');
-    })
+    setTimeout(() => {
+      this.showLoaded();
+    }, 100);
   }
 
-  photoRender() {
-    photos.map((photo) =>
-      <ImageCard key={photo.id} description={photo.description} image={photo.src}/>
-    )
+  showLoaded() {
+    this.imageList.current.style.opacity = 1;
   }
 
   render() {
     return (
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <div className="art-color-underlay"/>
         <Col sm={{ span: 8, offset: 2 }} xl={{ span: 7, offset: 2 }}>
           <NavMenu title="Art"/>
@@ -67,13 +67,13 @@ class ArtPage extends Component {
           marginTop:'-2px'
         }}>
         <div className='background-color'/>
-        <div className="image-list">
-          {
-            photos.map((photo) =>
-            <ImageCard key={photo.id} description={photo.description} image={photo.src}/>
-            )
-          }
-        </div>
+          <div ref={ this.imageList } className="image-list">
+            {
+              photos.map((photo) =>
+              <ImageCard key={photo.id} description={photo.description} image={photo.src}/>
+              )
+            }
+          </div>
         </Col>
       </div>
     )

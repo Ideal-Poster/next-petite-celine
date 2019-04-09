@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 import { Col, Row } from 'antd';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faPlay, faForward, faBackward, faPause } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faPlay, faForward, faBackward, faPause } from '@fortawesome/free-solid-svg-icons';
 
-// library.add(faPlay, faForward, faBackward, faPause)
+library.add(faPlay, faForward, faBackward, faPause)
 
 
 class MusicPlayer extends Component {
@@ -174,9 +174,9 @@ class MusicPlayer extends Component {
     const progressStyle = { width: `${this.state.progress * 100}%`, backgroundColor: progressColor }
     let button;
     if(this.state.play) {
-      // button =  <FontAwesomeIcon className="music-control" onClick={this.handleToggle.bind(this)} icon={ faPause } />
+      button =  <FontAwesomeIcon className="music-control" onClick={this.handleToggle.bind(this)} icon={ faPause } />
     } else {
-      // button = <FontAwesomeIcon className="music-control" onClick={this.handleToggle.bind(this)} icon={ faPlay } />
+      button = <FontAwesomeIcon className="music-control" onClick={this.handleToggle.bind(this)} icon={ faPlay } />
     }
 
     return (
@@ -199,9 +199,9 @@ class MusicPlayer extends Component {
 
               <Col xs={{ span: 6, offset: 1 }} md={{ span: 4, offset: 1 }} xl={{ offset: 2 }}>
                 <div className="controls">
-                  {/* <FontAwesomeIcon className="music-control" onClick={this.handlePrev.bind(this)} icon={ faBackward } /> */}
+                  <FontAwesomeIcon className="music-control" onClick={this.handlePrev.bind(this)} icon={ faBackward } />
                   { button }
-                  {/* <FontAwesomeIcon className="music-control" onClick={this.handleNext.bind(this)} icon={ faForward } /> */}
+                  <FontAwesomeIcon className="music-control" onClick={this.handleNext.bind(this)} icon={ faForward } />
                 </div>
               </Col>
 

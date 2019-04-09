@@ -19,20 +19,14 @@ class ImageCard extends React.Component {
 
     setTimeout(() => {
       this.imageRef.current.addEventListener('load',this.setSpans());
-    }, 400);
-
-    // this.addEventListener('load')
+    }, 200);
   }
 
   render() {
     const { image, description } = this.props
     return(
       <div style={{ gridRowEnd: `span ${this.state.spans}`}}>
-        <img
-          ref={ this.imageRef }
-          src={ image }
-          alt={ description }
-        />
+        <img ref={ this.imageRef } src={ image } alt={ description }/>
       </div>
     )
   }
