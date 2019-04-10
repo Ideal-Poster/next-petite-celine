@@ -15,24 +15,49 @@ import { faApple, faSpotify, faGooglePlay, faSoundcloud } from '@fortawesome/fre
 library.add(faApple, faSpotify, faGooglePlay, faSoundcloud);
 
 // import '@fortawesome/fontawesome-svg-core/styles.css';
-
+import { Modal, Input } from 'antd';
 
 class Home extends React.Component {
-  state = { showComponent: false }
+  state = {
+    showComponent: false,
+    visible: false,
+    name: '',
+    email: ''
+  }
   constructor(props) {
     super(props);
     this.icons = React.createRef();
   }
 
-  _onTrackClick = () => {
+  handleChange (event) {
+    this.setState({[event.target.name]: event.target.value})
+    console.log(this.state.name);
+  }
+
+  showModal = () => {
     this.setState({
-      showComponent: true,
+      visible: true,
+    });
+  }
+
+  handleOk = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
+
+  handleCancel = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
     });
   }
 
   componentDidMount() {
     this.init();
     this.showLoaded();
+    this.showModal();
   }
 
   showLoaded() {
@@ -62,6 +87,24 @@ class Home extends React.Component {
         <Head>
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossOrigin="anonymous"></link>
         </Head>
+
+        <div>
+          <Modal
+            // title="Basic Modal"
+            visible={this.state.visible}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+          >
+
+            <div style={{textAlign: 'center', padding: '20px'}}>
+              <h1>Join Petite Celine World</h1>
+              <p>Stay up to date on news and events by joining my mailing list.</p>
+            </div>
+            <Input required={true}  name="name" placeholder="Name"  style={{ marginBottom: '10px' }} onChange={event => this.handleChange(event)}/>
+            <Input name="email" placeholder="Email" />
+          </Modal>
+        </div>
+
         <div className="music-color-underlay"></div>
         <div className="background">
           <Col sm={{ span: 4, offset: 1 }} md={{ span: 4, offset: 2 }} id="nav-menu">
@@ -104,7 +147,8 @@ class Home extends React.Component {
             </div>
           </Col>
         </div>
-        {this.state.showComponent &&
+        {
+          this.state.showComponent &&
           <MusicPlayer playlist={playlist} ref={musicPlayer => (this.musicPlayer = musicPlayer)}/>
         }
         <Events/>

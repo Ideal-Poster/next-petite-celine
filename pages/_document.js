@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 // import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'antd/dist/antd.less';
 
 export default class MyDocument extends Document {
   render() {

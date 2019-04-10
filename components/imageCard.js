@@ -26,7 +26,7 @@ class ImageCard extends React.Component {
     const { image, description , index, openLightbox } = this.props
     return(
       <div style={{ gridRowEnd: `span ${this.state.spans}`}}>
-        <img onClick={ function() { openLightbox(index) } } ref={ this.imageRef } src={ image } alt={ description }/>
+        <img style= {{ cursor: 'pointer'}} onClick={ function() { openLightbox(index) } } ref={ this.imageRef } src={ image } alt={ description }/>
       </div>
     )
   }
