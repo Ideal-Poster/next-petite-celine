@@ -465,5 +465,68 @@ body {
   width: 100px;
 }
 
+// Lightbox style
+
+#lightboxContainer {
+  // background: cornflowerblue;
+  z-index: 10000;
+}
+
+#lightboxContainer,
+#lightboxBackground {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+#lightboxBackground {
+  position: fixed;
+  opacity: 0.8;
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 90000;
+}
+
+.activeImage
+// , .chevronLeft, .chevronRight
+{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform:
+    translateX(-50%)
+    translateY(-50%);
+}
+
+.activeImage {
+  position: relative;
+  opacity: 1;
+  z-index: 90000;
+  width: 400px;
+  text-align: center;
+
+}
+.chevronLeft, .chevronRight {
+  color: white;
+  font-size: 40px;
+  z-index: 95000;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  transform:
+    translateY(-50%);
+
+}
+
+.chevronLeft {
+  left: 10%;
+}
+
+.chevronRight {
+  right: 10%;
+}
+
 
 

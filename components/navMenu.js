@@ -3,13 +3,11 @@ import Route from 'next/router';
 
 import Link from 'next/link';
 
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-// import {  TweenMax, Power4 } from 'gsap';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-// library.add(faInstagram, faFacebook, faYoutube)
+library.add(faInstagram, faFacebook, faYoutube)
 
 class NavMenu extends Component  {
   constructor() {
@@ -61,15 +59,15 @@ class NavMenu extends Component  {
 
         <div style={{ width: '120px' }}>
           <a href="https://www.instagram.com/petite_celine/" rel="noopener noreferrer" target="_blank">
-            {/* <FontAwesomeIcon className="instagram" icon={ faInstagram } /> */}
+            <FontAwesomeIcon className="instagram" icon={ faInstagram } />
           </a>
 
           <a href="https://www.facebook.com/cdutertre.nyc" rel="noopener noreferrer" target="_blank">
-            {/* <FontAwesomeIcon className="facebook" icon={ faFacebook}/> */}
+            <FontAwesomeIcon className="facebook" icon={ faFacebook}/>
           </a>
 
           <a href="https://www.youtube.com/user/celineNYCmusic" rel="noopener noreferrer" target="_blank">
-            {/* <FontAwesomeIcon className="youtube" icon={ faYoutube } /> */}
+            <FontAwesomeIcon className="youtube" icon={ faYoutube } />
           </a>
         </div>
 
